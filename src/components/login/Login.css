@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800; 1.900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: 0;
+    border: 0;
+
+}
+
+
+
+.container{                         
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../img/Group.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.contest{
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 1200px;
+    max-width: 100%;
+    min-height: 650px;
+    background-color: white;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.079);
+
+}
+
+.contest p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+
+}
+
+.contest button{                    
+    background-color: #408940;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 45px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+}
+
+.singinbtn{
+    background-color: #4F78C1;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 45px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+}
+
+.contest button.hidden{
+    background-color: transparent;
+    border-color: white;
+
+}
+
+button.hidden:hover{
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+.contest form{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+
+}
+
+.contest input{
+    background-color: #eee;
+    margin: 8px 0;
+    padding: 17px 15px;
+    font-size: 13px;
+    border-radius: 20px;
+    width: 60%;
+    outline: none;
+
+
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+
+}
+
+.contest.active .sign-in{
+    transform: translateX(100%);
+
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+
+}
+
+.contest.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+
+    }
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 0 20px 20px 268px;
+    z-index: 1000;
+
+}
+
+.contest.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 0 268px 20px;
+
+}
+
+.toggle{
+    background-color: #4F78C1;
+    height: 100%;
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+
+}
+
+.contest.active .toggle{
+    transform: translateX(50%);
+
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.414);
+
+}
+
+.toggle-panel h1{
+    font-size: 2.5rem;
+}
+
+.toggle-panel p{
+    font-size: 20px;
+    width: 80%;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+
+}
+
+.contest.active .toggle-left{
+    transform: translateX(0);
+
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+
+}
+
+.contest.active .toggle-right{
+    transform: translateX(200%);
+    
+}
+
+.confirm{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: #e3e3e3;
+    height: 80%;
+
+}
+
+.confirm p{
+    font-size: 20px;
+
+}
+
+/* .loader {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #1cd42550;
+    border-top-color: #1cd425;
+    animation: spin013151 1s linear infinite;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 16.5%;
+    left: 70%;
+}
+
+@keyframes spin013151 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.check{
+    background-color: #1cd425;
+    color: white;
+    border-radius: 20px;
+    padding: 2px;
+} */
+
+.icons{
+    transform: translateY(-45px);
+    margin-left: 250px;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+::-ms-reveal{
+    display: none;
+
+}
+
+/* INPUT */
+
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.coolinput label.text {
+    font-size: 0.75rem;
+    color: #4F78C1;
+    font-weight: 700;
+    position: relative;
+    top: 1rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: white;
+    width: fit-content;
+}
+
+.coolinput input[type=text].input {
+    font-size: 1rem;
+    border: 2px #4F78C1 solid;
+    border-radius: 5px;
+    background: white;
+    width: 300px;
+    height: 40px;
+}
+
+.coolinput input[type=text].input:focus {
+    outline: none;
+}
+
+.logofv{
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    margin-left: 30px;
+
+}
+
+/*button test */
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    top: 20px;
+    left: 20px;
+}
+
+.buttons button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 20px;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #4f79c15c;
+}
+
+.buttons button:before, .buttons button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #4F78C1;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:after {
+    left: 0;
+    bottom: 0;
+}
+
+.buttons button span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.buttons button span:before, .buttons button span:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #4F78C1;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:after {
+    left: 0;
+    bottom: 0;
+}
+
+.buttons button p {
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons button p:before, .buttons button p:after {
+    position: absolute;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    z-index: 1;
+    left: 0;
+}
+
+.buttons button p:before {
+    content: attr(data-title);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buttons button p:after {
+    content: attr(data-text);
+    top: 150%;
+    color: #4F78C1;
+}
+
+.buttons button:hover:before, .buttons button:hover:after {
+    width: 100%;
+}
+
+.buttons button:hover span {
+    z-index: 1;
+}
+
+.buttons button:hover span:before, .buttons button:hover span:after {
+    height: 100%;
+}
+
+
+.circle{
+    border: 1px solid #4F78C1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 54px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4F78C1;
+
+}
+
+.circle i{
+    margin-left: 7px;
+    font-size: 16px;
+}
+

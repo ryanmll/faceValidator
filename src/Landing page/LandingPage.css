@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-image: url(../img/background.png);
+    height: 100vh;
+
+}
+
+#logo{
+    width: 230px;
+    margin-left: 120px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 99vw;
+    position: absolute;
+    top: 40px;
+
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 130px;
+    
+}
+
+li{
+    padding: 10px 10px;
+    margin-left: 10px;
+    color: black;
+    font-size: 17.5px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 30px;
+
+}
+
+li:hover{
+    background-color: #4f79c14a;
+}
+
+header{
+    display: flex;
+
+}
+
+.part1{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.part1 h1{
+    width: 70%;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+
+}
+
+.part1 h1 > span{
+    color: #4F78C1;
+    font-weight: 600;
+} 
+
+.part1 button{
+    background-color: #4F78C1;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-right: 480px;
+    cursor: pointer;
+
+}
+
+.partImg{
+    width: 40%;
+
+}
+
+button{
+    background-color: #4F78C1;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+
+}
+
+#btnLogin{
+    margin-left: 10px;
+}
+
+button:hover{
+    background-color: #3c65ab;
+
+}
+
+main{
+    height: 120vh;
+}
+
+main h1{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+section h2{
+    color: #4F78C1;
+    font-weight: 500;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.line{
+    height: 1px;
+    margin: auto;
+    width: 80%;
+    background-color: black;
+    margin-top: 20px;
+
+}
+
+.ilustracao{
+    width: 500px;
+
+}
+
+#first{
+    width: 350px;
+}
+
+.partition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+
+}
+
+.partition h2{
+    color: #4F78C1;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.partition p{
+    width: 80%;
+    font-size: 18px;
+
+}
+
+.separation{
+    margin-left: 100px;
+
+}
+
+section h1{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+footer{
+    margin-top: 70px;
+    padding-top: 50px ;
+    height: 30vh;
+    background-color: #4F78C1;
+
+}
+
+footer i{
+    color: white;
+}
+
+.info{
+    display: flex;
+    color: white;   
+    margin-left: 200px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.info1 p{
+    margin-left: 15px;
+}
+
+.info p{
+    margin-left: 15px;
+}
+
+.cardes{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+}
+
+.tit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sectionCards{
+    border: 2px solid #4F78C1;
+    border-radius: 20px;
+    height: 250px;
+    width: 210px;
+    padding: 20px;
+
+}
+
+.sectionCards p{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.sectionCards h3{
+    color: #4F78C1;
+    text-align: justify;
+    font-size: 16px;
+
+}
+
+i{
+    color: #4F78C1;
+    font-size: 35px;
+    padding-right: 8px ;
+}
+
+#fc{
+    margin-top: 40px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
